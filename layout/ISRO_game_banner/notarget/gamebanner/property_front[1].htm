@@ -1,0 +1,41 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1">
+    <title>SilkroadOnline</title>
+    <meta name="Keywords" content="silkroad, MMORPG, Free to play, f2p, hardcore mmorpg, Online game, free online mmorpg, Free game, joymax, pc game, free download, download" />
+    <meta name="Description" content="Silkroad Online is a World's first blockbuster Free to play MMORPG. Silkroad Olnine puts players deep into ancient Chinese, Islamic, and European civilization. Enjoy Silkroad's hardcore PvP, personal dungeon system, never ending fortress war and be the top of the highest heroes!" />
+    <script type="text/javascript" language="javascript" src="http://file.joymax.com/library/jquery/jquery-1.4.2.min.js"></script>   
+    <script type="text/javascript" language="javascript" src="http://file.joymax.com/library/Validator/JMX_FormValidator.js"></script>  
+    <script type="text/javascript" language="javascript" src="http://file.joymax.com/library/Ajax/JMX_AjaxControl.js"></script>
+    <script type="text/javascript" language="javascript" src="/_js/JMX.Frame.Common.js?var=20210824"></script>
+    <script type="text/javascript" language="javascript">
+        document.domain = "joymax.com";
+        
+        function SessionKeepResult(RequestVal) {
+            if (RequestVal !== "0") { top.location.href = "http://www.joymax.com/SignOut.aspx?SignOutParam=http://silkroadcp.joymax.com/notarget/gamebanner/client_ending.asp"; }
+        }
+        function getSessionInfo() {
+            return "";
+        }
+        function getCountryCode() {
+            return "EG";
+        }
+        function checkEventCoupon() {
+            return "-65543";
+        }
+        function SessionKeep() {
+            RequestValueAjax('GET', 'http://www.joymax.com/SessionKeep.aspx', '', SessionKeepResult, '', 1);
+        }
+        function JMXAddMemberByJoymax(returnURL) {
+            //top.location.href = "https://www.joymax.com/member/Property_Front.aspx?WorkURL=https://membercp.joymax.com/PropertyAddMember/AddMemberByJoymax.aspx?Property=silkroad^returnURL=" + returnURL + "^JID=";
+            top.location.href = "https://www.joymax.com/member/Property_Front.aspx?WorkURL=https://membercp.joymax.com/MyAccount/UseAgreement/UseAgreement.aspx?property=silkroad^returnURL=" + returnURL;
+        }
+    </script>
+    
+</head>
+        <frameset cols="*" rows="1,*" framespacing="0" frameborder="0" border="0">
+            <frame name="JMX_FrameServerLayer" frameborder="0" noresize="true" marginwidth="0" marginheight="0" width="0" height="0" >
+		    <frame src="http://silkroadcp.joymax.com/notarget/gamebanner/client_ending.asp" name="JMX_CPLayer" id="JMX_CPLayer" frameborder="0" noresize="true" marginwidth="0" marginheight="0" width="100%" height="100%"/>
+	    </frameset>
+</html>

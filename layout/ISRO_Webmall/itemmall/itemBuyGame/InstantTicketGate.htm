@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Silkroad</title>
+    <meta http-equiv='Page-Enter' content='blendTrans(Duration=0.2)'>
+    <meta http-equiv='Page-Exit' content='blendTrans(Duration=0.2)'>
+    <link rel='stylesheet' type='text/css' href='css/InstantTicket.css' />
+    <script type="text/javascript" src="library/config/jquery-1.7.1.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        function comma(num) { var len, point, str; num = num + ""; point = num.length % 3; len = num.length; str = num.substring(0, point); while (point < len) { if (str != "") str += ","; str += num.substring(point, point + 3); point += 3; } return str; }
+
+        function fn_InstantTicket(txtType) {
+
+            if (txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") {
+                if (confirm("Do you really want to purchase?") != true) {
+                    return;
+                }
+            }
+
+            var preSilk = 0;
+            var normalSilk = 0;
+            var ticketPrice = 13;
+
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "InstantTicket_Ajax.asp", data: { txtType: txtType },
+                success: function (retJsonData) {
+                    if (retJsonData) {
+                        if (retJsonData[0].result == "0") {
+                            switch (txtType) {
+                                case "UserSilkInfo":
+                                    if ((isNaN(parseInt(retJsonData[0].normal, 10)))) {
+                                        $("#normalSilk").html("0");
+                                        normalSilk = 0;
+                                    }
+                                    else {
+                                        $("#normalSilk").html(comma(retJsonData[0].normal));
+                                        normalSilk = parseInt(retJsonData[0].normal, 10);
+                                    }
+
+                                    if ((isNaN(parseInt(retJsonData[0].premium, 10)))) {
+                                        $("#premiumSilk").html("0");
+                                        preSilk = 0;
+                                    }
+                                    else {
+                                        $("#premiumSilk").html(comma(retJsonData[0].premium));
+                                        preSilk = parseInt(retJsonData[0].premium, 10);
+                                    }
+                                    $("#btn_preConfrim_Active").hide();
+                                    $("#btn_normalConfrim_Active").hide();
+                                    if (preSilk > (ticketPrice - 1)) {
+                                        $("#btn_preConfrim_Active").show();
+                                    }
+                                    else {
+                                        if ((normalSilk + preSilk) > (ticketPrice - 1)) {
+                                            $("#btn_normalConfrim_Active").show();
+                                        }
+                                    }
+                                    break;
+
+                                case "BuyPreInstantTicket":
+                                    alert("Purchase is complete.");
+                                    break;
+                                case "BuyNormalInstantTicket":
+                                    alert("Purchase is complete.");
+                                    break;
+
+                            }
+                        }
+                        else {
+                            if ((txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") && retJsonData[0].result == "-65539") {
+                                alert("There is a ticket already in use.");
+                            }
+                            else if ((txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") && retJsonData[0].result == "-65540") {
+                                if (confirm("You don't have enough Silk. Would you like to charge?") == true) {
+                                    window.open('https://www.joymax.com/billing/Property_Front.aspx?WorkUrl=https://billingcp.joymax.com/ChargeSilk/pgList_v2.aspx', '_blank');
+                                }
+                            }
+                            else if ((txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") && retJsonData[0].result == "-131084") {
+                                alert("No service available. This area is blocked.\n\nPlease click 'Support' for inquiries.");
+                            }
+                            else if ((txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") && retJsonData[0].result == "-131078") {
+                                alert("No service available. The account is blocked.\n\nPlease click 'Support' for inquiries.");
+                            }
+                            else if ((txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") && retJsonData[0].result == "-131080") {
+                                alert("No service available. The IP is blocked.\n\nPlease click 'Support' for inquiries.");
+                            }
+                            else if ((txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") && retJsonData[0].result == "-1001") {
+                                alert("No service available. Payment has been blocked.\n\nPlease click 'Support' for inquiries.");
+                            }
+                            else if ((txtType == "BuyPreInstantTicket" || txtType == "BuyNormalInstantTicket") && retJsonData[0].result == "-1002") {
+                                alert("No service available. This user has been blocked from portal services.\n\nPlease click 'Support' for inquiries.");
+                            }
+                            else {
+                                alert("There is an error in system or it is not a proper way.");
+                            }
+                        }
+                        // });
+                    } else {
+                        alert("Please try again later.");
+                        return;
+                    }
+                },
+                complete: function () {
+                    switch (txtType) {
+                        case "BuyPreInstantTicket":
+                            // Silk information update.
+                            fn_InstantTicket("UserSilkInfo");
+                            break;
+                        case "BuyNormalInstantTicket":
+                            // Silk information update.
+                            fn_InstantTicket("UserSilkInfo");
+                            break;
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="background">
+        <div class="bg">
+            <img src="images/bg.png"></div>
+        <div class="LineMarge">
+            <img src="images/LineMarge.png"></div>
+        <div class="Somelittletimemayben">
+            * Some little time may be needed for accessing the game after
+            <p>
+                purchasing the instant access tickets.</p>
+            <p>
+            </p>
+            * You will have the access function to the game for 4 hour after
+            <p>
+                purchasing the ticket.</p>
+            <p>
+            </p>
+            * You can check the purchase completion time from the Item Mall
+            <p>
+                History in the game.</p>
+        </div>
+        <div class="NLtabButtonConfirmdi">
+            <img src="images/NLtabButtonConfirmdi.png"></div>
+        <div class="NLtabButtonConfirm" id="btn_normalConfrim_Active" style="display: none;
+            cursor: pointer" onclick="fn_InstantTicket('BuyNormalInstantTicket');">
+            <img src="images/NLtabButtonConfirm.png"></div>
+        <div class="NLtabRedimgLayer">
+            <img src="images/NLtabRedimgLayer.png"></div>
+        <div class="NLtabsilkicon">
+            <img src="images/UserIconsilk.png"></div>
+        <div class="NLtabInstantAccessTi">
+            Instant Access Ticket
+            <p>
+                (with Silk or Premium Silk)</p>
+        </div>
+        <div class="NLtabPreTabWebPacket">
+            13</div>
+        <div class="PreTabTextNotice">
+            * The Premium Silk used for purchasing the above tickets are
+            <p>
+                accumulated towards Silk usage for VIP ranks.</p>
+        </div>
+        <div class="PreTabButtonConfirmd">
+            <img src="images/NLtabButtonConfirmdi.png"></div>
+        <div class="PreTabbuttonConfirm" id="btn_preConfrim_Active" style="display: none;
+            cursor: pointer;" onclick="fn_InstantTicket('BuyPreInstantTicket');">
+            <img src="images/NLtabButtonConfirm.png"></div>
+        <div class="PreTabBlueimgLayer">
+            <img src="images/PreTabBlueimgLayer.png"></div>
+        <div class="PreTabIconsilk">
+            <img src="images/UserIconPRESilk.png"></div>
+        <div class="PreTabInstantAccessT">
+            Instant Access Ticket
+            <p>
+                (with Premium Silk only)</p>
+        </div>
+        <div class="PreTabInstantAccessTSmall">
+        </div>
+        <div class="PreTabWebPacketPREsi">
+            13</div>
+        <div class="UserIconPRESilk">
+            <img src="images/UserIconPRESilk.png"></div>
+        <div class="UserIconsilk">
+            <img src="images/UserIconsilk.png"></div>
+        <div class="UserButtonRefresh" onclick="fn_InstantTicket('UserSilkInfo');" style="cursor: pointer">
+            <img src="images/UserButtonRefresh.png"></div>
+        <div class="UserbuttonCharge" style="cursor: pointer">
+            <a href="https://www.joymax.com/billing/Property_Front.aspx?WorkUrl=https://billingcp.joymax.com/ChargeSilk/pgList_v2.aspx" target="_blank">
+                <img src="images/UserbuttonCharge.png" border="0"></a></div>
+        <div class="UsertextPRESilk">
+            Premium Silk</div>
+        <div class="UsertextSilk">
+            Silk</div>
+        <div class="UserWebPacketsilk" id="normalSilk">
+            0</div>
+        <div class="UserWebPacketPRESilk" id="premiumSilk">
+             0</div>
+    </div>
+</body>
+</html>

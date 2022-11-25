@@ -1,0 +1,326 @@
+ body {
+	margin: 0;
+	padding: 0;
+ }
+ 
+ .background 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: relative; 
+	 margin-left: auto; 
+	 margin-right: auto; 
+	 width: 420px;
+	 height: 460px; 
+	 overflow: hidden;
+	 z-index:0;
+	} 
+
+ .bg 
+{ 
+	 left: 0px; 
+	 top: -7px; 
+	 position: absolute; 
+	 width: 420px;
+	 height: 467px;
+	 z-index:1;
+} 
+
+ .LineMarge 
+{ 
+	 left: 0px; 
+	 top: 0px; 
+	 position: absolute; 
+	 width: 420px;
+	 height: 459px;
+	 z-index:2;
+} 
+
+ .Somelittletimemayben 
+{ 
+	 left: 26px; 
+	 top: 334px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:11px;
+	 color:#BAB9B9;
+	 z-index:3;
+} 
+
+
+ .Somelittletimemayben p{ 
+	 margin:0 0 5px 0;
+} 
+
+ .Somelittletimemayben_Error 
+{ 
+	 left: 26px; 
+	 top: 184px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:13px;
+	 font-weight:normal;
+	 color:#BAB9B9;
+	 z-index:3;
+} 
+
+ .Somelittletimemayben_Error p
+{ 
+	 margin:0 0 10px 0;
+} 
+
+
+ .NLtabButtonConfirmdi 
+{ 
+	 left: 302px; 
+	 top: 245px; 
+	 position: absolute; 
+	 width: 104px;
+	 height: 25px;
+	 z-index:4;
+} 
+
+ .NLtabButtonConfirm 
+{ 
+	 left: 302px; 
+	 top: 246px; 
+	 position: absolute; 
+	 width: 104px;
+	 height: 25px;
+	 z-index:5;
+} 
+
+ .NLtabRedimgLayer 
+{ 
+	 left: 13px; 
+	 top: 209px; 
+	 position: absolute; 
+	 width: 273px;
+	 height: 58px;
+	 z-index:6;
+} 
+
+ .NLtabsilkicon 
+{ 
+	 left: 307px; 
+	 top: 219px; 
+	 position: absolute; 
+	 width: 15px;
+	 height: 15px;
+	 z-index:7;
+} 
+
+ .NLtabInstantAccessTi 
+{ 
+	 left: 72px; 
+	 top: 222px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:17px;
+	 color:#FFFFFF;
+	 z-index:8;
+} 
+
+.NLtabInstantAccessTi p {
+	 position: absolute; 
+	 left: 5px;
+	 top : 22px;
+	 font-family:'Gulim';
+	 font-size:11px;
+	 color:#FFFFFF;
+	 margin:0 0 5px 0;
+    width: 150px;
+}
+
+ .NLtabPreTabWebPacket 
+{ 
+	 left: 330px; 
+	 top: 221px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:12px;
+	 color:#00FF42;
+	 z-index:9;
+} 
+
+ .PreTabTextNotice 
+{ 
+	 left: 32px; 
+	 top: 142px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:10px;
+	 color:#D2D1D0;
+	 z-index:10;
+} 
+
+ .PreTabTextNotice p{
+	margin:0 0 5px 0;
+ }
+
+
+ .PreTabButtonConfirmd 
+{ 
+	 left: 302px; 
+	 top: 99px; 
+	 position: absolute; 
+	 width: 104px;
+	 height: 25px;
+	 z-index:99;
+} 
+
+ .PreTabbuttonConfirm 
+{ 
+	 left: 302px; 
+	 top: 99px; 
+	 position: absolute; 
+	 width: 104px;
+	 height: 25px;
+	 z-index:100;
+} 
+
+ .PreTabBlueimgLayer 
+{ 
+	 left: 13px; 
+	 top: 62px; 
+	 position: absolute; 
+	 width: 273px;
+	 height: 58px;
+	 z-index:13;
+} 
+
+ .PreTabIconsilk 
+{ 
+	 left: 307px; 
+	 top: 72px; 
+	 position: absolute; 
+	 width: 15px;
+	 height: 15px;
+	 z-index:14;
+} 
+
+ .PreTabInstantAccessT 
+{ 
+	 left: 72px; 
+	 top: 75px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:17px;
+	 color:#FFFFFF;
+	 z-index:15;
+} 
+
+.PreTabInstantAccessT p {
+	 position: absolute; 
+	 left: 13px;
+	 top: 22px;
+	 font-family:'Gulim';
+	 font-size:11px;
+	 color:#FFFFFF;
+	 margin:0 0 5px 0;
+}
+
+ .PreTabWebPacketPREsi 
+{ 
+	 left: 330px; 
+	 top: 74px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:12px;
+	 color:#00FF42;
+	 z-index:16;
+} 
+
+ .UserIconPRESilk 
+{ 
+	 left: 82px; 
+	 top: 12px; 
+	 position: absolute; 
+	 width: 15px;
+	 height: 15px;
+	 z-index:17;
+} 
+
+ .UserIconsilk 
+{ 
+	 left: 234px; 
+	 top: 12px; 
+	 position: absolute; 
+	 width: 15px;
+	 height: 15px;
+	 z-index:18;
+} 
+
+ .UserButtonRefresh 
+{ 
+	 left: 324px; 
+	 top: 6px; 
+	 position: absolute; 
+	 width: 33px;
+	 height: 27px;
+	 z-index:19;
+} 
+
+ .UserbuttonCharge 
+{ 
+	 left: 363px; 
+	 top: 6px; 
+	 position: absolute; 
+	 width: 49px;
+	 height: 27px;
+	 z-index:20;
+} 
+
+ .UsertextPRESilk 
+{ 
+	 left: 9px; 
+	 top: 16px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:11px;
+	 color:#FFFFFF;
+	 z-index:21;
+} 
+
+ .UsertextError
+{ 
+	 left: 9px; 
+	 top: 16px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:16px;
+	 color:#FFFFFF;
+	 z-index:21;
+} 
+
+ .UsertextSilk 
+{ 
+	 left: 164px; 
+	 top: 14px; 
+	 position: absolute; 
+	 font-size:11px;
+	 color:#FFFFFF;
+	 z-index:22;
+} 
+
+ .UserWebPacketsilk 
+{ 
+	 left: 257px; 
+	 top: 14px; 
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:12px;
+	 color:#00FF42;
+	 z-index:23;
+} 
+
+ .UserWebPacketPRESilk 
+{ 
+	 left: 102px; 
+	 top: 14px;     
+	 position: absolute; 
+	 font-family:'Gulim';
+	 font-size:12px;
+	 color:#00FF42;
+	 z-index:24;
+} 
