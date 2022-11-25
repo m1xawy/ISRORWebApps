@@ -1,0 +1,597 @@
+
+*{
+	box-sizing: border-box;
+}
+
+
+/*---------------------------------Header---------------------------------*/
+
+header{
+	position: absolute;
+	width: 100%;
+	height: 70px;
+	background-color: rgba(2355,255,255,0.9);
+	min-width: 1260px;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	border-bottom: 1px solid #535353;
+}
+
+.topbar{
+	position: relative;
+	width: 1360px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+.left-nav{
+	position: relative;
+	list-style: none;
+	height: 70px;
+	padding: 0;
+	margin: 0;
+	float: left;
+	z-index: 11;
+}
+
+.navbar-overlay{
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.nav-mobile {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 70px;
+	width: 70px;
+}
+
+#nav-toggle {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 1.875rem;
+	text-decoration: none;
+	color: #000;
+}
+
+.header-menu{
+	position: relative;
+	list-style: none;
+	height: 70px;
+	padding: 0;
+	margin: 0;
+	float: left;
+	margin-left: 200px;
+	overflow-x: hidden;
+	transition: 0.3s;
+}
+
+.header-menu a{
+	display: inline-block;
+	margin: 0 20px;
+	height: 70px;
+	vertical-align: top;
+	font-size: 1.3rem;
+	text-align: center;
+	line-height: 70px;
+	text-decoration: none;
+	transition: 0.3s linear;
+	color: #000;
+}
+
+.header-menu a:hover{
+	color: #007edb;
+}
+
+.header-menu.menu-slide-l{
+	transform: translateX(0%);
+}
+
+.digeam-top-logo{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 197px;
+	height: 70px;
+	z-index: 12;
+}
+.webp .digeam-top-logo{
+	background: url('../imgp/digeam-logo-header.webp') no-repeat center center;
+}
+.no-webp .digeam-top-logo{
+	background: url('../img/digeam-logo-header.png') no-repeat center center;
+}
+
+#digeam-top-logo-w{
+	display: none;
+	position: absolute !important;
+	left: 0 !important;
+	top: 0 !important;
+	width: 197px !important;
+	height: 70px !important;
+}
+.webp #digeam-top-logo-w{
+	background: url('../imgp/digeam-logo-header-w.webp') no-repeat center center;
+}
+.no-webp #digeam-top-logo-w{
+	background: url('../img/digeam-logo-header-w.png') no-repeat center center;
+}
+
+.right-nav{
+	position: relative;
+	list-style: none;
+	height: 70px;
+	padding: 0;
+	margin: 0;
+	float: right;
+	z-index: 11;
+}
+
+.nav-mobile-r{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 70px;
+	width: 70px;
+}
+
+#nav-toggle-r {
+	position: relative;
+	display: block;
+	cursor: pointer;
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	text-align: center;
+	font-size: 1.875rem;
+	text-decoration: none;
+	color: #000;
+}
+
+.member-menu{
+	position: relative;
+	float: right;
+	height: 70px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	/*overflow-x: hidden;*/
+	transition: 0.3s linear;
+}
+
+.member-menu a{
+	display: inline-block;
+	margin: 0 10px;
+	color: #00233d;
+	font-size: 1.3rem;
+	text-align: center;
+	height: 70px;
+	line-height: 70px;
+	text-decoration: none;
+	transition: 0.3s linear;
+}
+
+#member_info {
+	color: #007EDB;
+}
+
+.member-menu a:hover{
+	color: #007edb;
+}
+
+.member-menu.menu-slide-r{
+	transform: translateX(0%);
+}
+
+.menu-close{
+	display: none;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	outline: none;
+	background-color: transparent;
+	border:none;
+}
+
+.menu-close-l{
+	top: 0;
+	left: 0;
+}
+
+.menu-close-r{
+	top: 0;
+	right: 0;
+}
+
+.menu-close svg{
+	width: 25px;
+	height: 25px;
+}
+
+.menu-icn{
+	position: relative;
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background-color: #00233d;
+	vertical-align: middle;
+	line-height: 30px;
+	margin-right: 5px;
+	text-align: center;
+}
+
+#message > .menu-icn{
+	background-color: #007edb;
+}
+
+#message i{
+	color: #fff;
+	font-size: 1.25rem;
+	margin-right: 0px;
+}
+
+.menu-icn i{
+	color: #fff;
+	font-size: 1.125rem;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#signin-btn-m{
+	display: none;
+	width: 100%;
+	height: 50px;
+	padding: 10px 20px;
+	border-bottom: 1px solid #313131;
+	background-color: #313131;
+}
+
+#signin-btn-m a{
+	display: block;
+	background-color: #fff !important;
+	color: #000;
+	text-align: center;
+	font-size: 1.5625rem;
+	width: calc(100% - 0px);
+	height: 50px;
+	line-height: 50px;
+	text-decoration: none;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#signin-btn-m a i{
+	margin-right: 10px;
+}
+
+/*---------------------------------Header-RWD---------------------------------*/
+
+/*for 手機裝置(螢幕尺寸<768px)*/
+@media screen and (max-width:767px){
+    header {
+	    position: fixed;
+	    height: 50px;
+	    background-color: rgba(49,49,49,1);
+	    min-width: auto;
+	}
+
+	.topbar {
+		width: 100vw;
+		height: 50px;
+	}
+
+	.digeam-top-logo {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%) !important;
+	    height: 100%;
+	    background-size: contain;
+	}
+	.webp .digeam-top-logo{
+		background: url('../imgp/digeam-logo-header-w.webp') no-repeat center center;
+	}
+	.no-webp .digeam-top-logo{
+		background: url('../img/digeam-logo-header-w.png') no-repeat center center;
+	}
+
+	.left-nav {
+	    height: 50px;
+	}
+
+	.right-nav {
+    	height: 50px;
+	}
+
+	.nav-mobile {
+	    height: 50px;
+	    width: 50px;
+	}
+
+	.nav-mobile-r {
+	    height: 50px;
+	    width: 50px;
+	}
+
+	#nav-toggle {
+	    height: 50px;
+	    line-height: 50px;
+	    color: #fff;
+	    font-size: 1.5625rem;
+	}
+
+	#nav-toggle-r {
+	    height: 50px;
+	    line-height: 50px;
+	    color: #fff;
+	    font-size: 1.5625rem;
+	}
+
+	.header-menu{
+		position: fixed !important;
+		width: 80vw;
+		height: 100vh !important;
+		padding: 50px 0 0 0!important;
+		top: 0;
+		left: 0;
+		background-color: #1b1b1b;
+		margin-left: 0 !important;
+		transform: translateX(-150%);
+	}
+
+	.header-menu a{
+	    display: block;
+	    margin: 0px;
+	    width: 100%;
+	    height: 50px;
+	    padding: 10px 20px;
+	    color: #fff;
+	    text-align: left;
+	    font-size: 1.125rem;
+	    border-bottom: 1px solid #313131;
+	    line-height: 30px;
+	}
+
+	.nav-mobile-r {
+		display: block;
+	}
+
+	.member-menu{
+		position: fixed !important;
+		width: 80vw;
+		height: 100vh !important;
+		padding: 50px  0 0  0!important;
+		top: 0;
+		right: 0;
+		background-color: #1b1b1b;
+		margin-left: 0 !important;
+		transform: translateX(150%);
+	}
+
+	.member-menu a{
+		display: block;
+	    margin: 0px;
+	    width: 100%;
+	    height: 50px;
+	    padding: 10px 20px;
+	    color: #fff;
+	    text-align: left;
+	    font-size: 1.125rem;
+	    border-bottom: 1px solid #313131;
+	    line-height: 30px;
+	}
+
+	#digeam-top-logo-w{
+		display: block;
+		padding: 0 !important;
+		margin-left: 0px !important;
+	    position: absolute !important;
+	    left: 0 !important;
+	    top: 0 !important;
+	    width: 100% !important;
+	    height: 50px !important;
+	    background-position: 20px center;
+	    background-size: 145px 30px;
+	}
+	.webp #digeam-top-logo-w{
+		background: url('../imgp/digeam-logo-header-w.webp') no-repeat center left;
+	}
+	.no-webp #digeam-top-logo-w{
+		background: url('../img/digeam-logo-header-w.png') no-repeat center left;
+	}
+
+	.menu-icn {
+	    width: 30px;
+	    height: 30px;
+	    background-color: transparent;
+	    line-height: 30px;
+	    margin-right: 15px;
+	    position: relative;
+		border-radius: 0%;
+	}
+
+	.menu-icn i {
+	    font-size: 1.125rem !important;
+	    vertical-align:baseline;
+	}
+
+	#signin-btn-m{
+		display: block;
+		height: 60px;
+	}
+
+	#signin-btn-m a {
+	    font-size: 1.25rem;
+	    width: 100%;
+	    height: 40px;
+	    line-height: 40px;
+	}
+
+	#signin-btn-pc{
+		display: none;
+	}
+
+	#message{
+
+	}
+
+	#message .menu-icn{
+		border-radius: 50%;
+	}
+
+	.menu-close{
+		width: 50px;
+		height: 50px;
+		z-index: 10;
+	}
+
+	.menu-close svg {
+	    width: 20px;
+	    height: 20px;
+	}
+}
+
+
+/*for 平板+手機裝置*/
+@media screen and (max-width:1260px){
+	header {
+		min-width: auto;
+	}
+
+	.topbar {
+		width: 100vw;
+	}
+
+	.nav-mobile {
+		display: block;
+	}
+
+	.menu-close{
+		display: block;
+	}
+
+	
+}
+
+/*for 平板裝置(768px<螢幕尺寸<1024px)*/
+@media screen and (min-width:768px) and (max-width:1024px){   
+	.header-menu{
+		position: fixed !important;
+		width: 40vw;
+		height: 100vh !important;
+		padding: 70px 0  0!important;
+		top: 0;
+		left: 0;
+		background-color: #1b1b1b;
+		margin-left: 0 !important;
+		transform: translateX(-150%);
+	}
+
+	.header-menu a{
+		display: block;
+		margin: 0px;
+		width: calc(100% - 0px);
+		height: 70px;
+		padding: 10px 20px;
+		color: #fff;
+		text-align: left;
+		font-size: 1.25rem;
+		border-bottom: 1px solid #313131;
+		line-height: 50px;
+	}
+
+	.nav-mobile-r {
+		display: block;
+	}
+
+	.member-menu{
+		position: fixed !important;
+		width: 40vw;
+		height: 100vh !important;
+		padding: 0px 0  0!important;
+		top: 0;
+		right: 0;
+		background-color: #1b1b1b;
+		margin-left: 0 !important;
+		transform: translateX(150%);
+	}
+
+	.member-menu a{
+		display: block;
+		margin: 0px;
+		width: calc(100% - 0px);
+		height: 70px;
+		padding: 10px 20px;
+		color: #fff;
+		text-align: left;
+		font-size: 1.25rem;
+		border-bottom: 1px solid #313131;
+		line-height: 50px;
+	}
+
+	.digeam-top-logo{
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	#digeam-top-logo-w{
+		display: block;
+		padding: 0 !important;
+		margin-left: 20px !important;
+	}
+
+	.menu-icn {
+	    width: 40px;
+	    height: 40px;
+	    background-color: transparent;
+	    line-height: 40px;
+	    margin-right: 15px;
+	    position: relative;
+		border-radius: 0%;
+	}
+
+	.menu-icn i {
+	    font-size: 1.5625rem;
+	    vertical-align:baseline;
+	}
+
+	#signin-btn-m{
+		display: block;
+		height: 70px;
+	}
+
+	#signin-btn-pc{
+		display: none;
+	}
+
+	#message{
+		width: 70px !important;
+		height: 70px !important;
+	}
+
+	#message .menu-icn{
+		border-radius: 50%;
+	}
+}
+
+/*for 一般電腦裝置(螢幕尺寸>1025px)*/
+@media screen and (min-width:1025px){   
+
+}

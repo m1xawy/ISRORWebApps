@@ -1,0 +1,113 @@
+.main-page .page-nav, .main-page .page-content {
+    width: 100%;
+}
+.main-page .page-nav ul li {
+    width: revert;
+    display: inline-block;
+}
+.main-page .page-box-content {
+    padding: 35px 40px;
+}
+.page-box-content thead tr {
+    background-color: #313131;
+    color: #fff;
+}
+.download.page-nav ul li {
+    position: relative;
+    display: block;
+    width: calc(100% - 0px);
+    height: 55px;
+    line-height: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    padding: 20px;
+    transition: 0.3s linear;
+    background-color: #313131;
+}
+
+.download.page-nav ul li {
+    display: inline-block;
+    width: 24%;
+    height: auto;
+    margin: 4px;
+}
+.download.page-nav ul li span {
+    margin: 20px 0;
+}
+.download.page-nav ul li .download-box {
+    height: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.download .page-btn {
+    background-color: #00233d !important;
+    border: 1px solid #007edb;
+    transition: none;
+    cursor: pointer;
+}
+.download.page-nav ul li:hover {
+    background-color: #1b1b1b;
+}
+
+.download.page-nav ul li a.page-nav-active:before,
+.download.page-nav ul li a:hover:before {
+    content: none;
+}
+
+.copyright a {
+    text-decoration: none;
+    color: #d1d1d1;
+    transition: 0.3s linear;
+}
+.copyright a:hover {
+    color: #007edb;
+}
+.copyright i {
+    color: #007edb;
+}
+
+/* grid shit */
+.row {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+.col-md-6 {
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: inline-block;
+    width: 49%; /*shit*/
+}
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+}
+.card {
+    background-color: #313131;
+    border: 1px solid #007edb;
+    color: #fff;
+}
+.card-header {
+    background-color: #1b1b1b;
+    border-bottom: 1px solid #007edb;
+    padding: 1.25rem;
+}
+.card-body {
+    padding: 1.25rem;
+}
+.card-header h6,
+.card-header h4 {
+    margin: 0;
+    padding: 0;
+}
+.donate .page-btn {
+    background-color: #00233d !important;
+    border: 1px solid #007edb;
+    transition: none;
+    cursor: pointer;
+}

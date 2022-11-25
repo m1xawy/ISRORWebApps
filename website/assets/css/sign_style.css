@@ -1,0 +1,586 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Noto Sans TC' !important;
+	position: relative;
+	padding: 0;
+	margin: 0;	
+	background-color: #000;
+}
+
+img{
+	height: auto;
+	max-width: 100%;
+}
+
+select,input,button{
+	font-family: 'Noto Sans TC' !important;
+}
+
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+}
+
+.container{
+	position: relative;
+	height: auto;
+}
+
+/*---------------------------------Create-Account---------------------------------*/
+
+section.signup{
+	width: 100%;
+	height: 100%;
+	min-height: 80vh;
+	position: relative;
+	padding-top: 70px;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.webp section.signup{
+	background: url('../imgp/signpagelogobg.webp') no-repeat center center;
+	background-color: #fff;
+	background-size: contain;
+}
+.no-webp section.signup{
+	background: url('../img/signpagelogobg.png') no-repeat center center;
+	background-color: #fff;
+	background-size: contain;
+}
+
+.signup-area{
+	width: 500px;
+	/*height: calc(100vh - 280px);*/
+	/*height: calc(100% - 0px);*/
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+	padding: 150px 0px 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+.sign-logo{
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+.signup-area h1{
+	text-align: center;
+	font-size: 1.5625rem;
+	color: #00233d;
+}
+
+.signup-area h2{
+	text-align: center;
+	font-size: 1.25rem;
+	color: #00233d;
+	margin-top: 0;
+}
+
+form.signup-form{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+form.signup-form > input{
+	width: calc(100% - 0px);
+	height: 40px;
+	border: 1px solid #7c7c7c;
+	background-color: #eeeeee;
+	padding: 2px 10px;
+	margin-top:10px;
+	font-size:  1rem;
+	outline: none;
+}
+
+form.signup-form input::placeholder {
+	color: #7c7c7c;
+	opacity: 1; /* Firefox */
+	font-family: 'Noto Sans TC' !important;
+}
+
+form.signup-form input:-ms-input-placeholder {
+	color: #7c7c7c;
+	font-family: 'Noto Sans TC' !important;
+}
+
+form.signup-form input::-ms-input-placeholder { 
+	color: #7c7c7c;
+	font-family: 'Noto Sans TC' !important;
+}
+
+.alert-danger {
+	position: relative;
+	/*margin-bottom: 20px;*/
+	color: red;
+	text-align: center;
+}
+
+.ca-recaptcha {
+	margin-top:10px;
+}
+
+.ca-mobile{
+	width: 100%;
+	height: 40px;
+	margin-top:10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.ca-mobile > select{
+	width: calc(30% - 0px);
+	margin-right: 10px;
+	height: 40px;
+	border: 1px solid #7c7c7c;
+	background-color: #eeeeee;
+	padding: 2px 10px;
+	font-size:  1rem;
+	outline: none;
+}
+
+.ca-mobile > input{
+	width: calc(70% - 10px);
+	height: 40px;
+	border: 1px solid #7c7c7c;
+	background-color: #eeeeee;
+	padding: 2px 10px;
+	font-size:  1rem;
+	outline: none;
+}
+
+.ca-birth{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	margin-top:10px;
+}
+
+.ca-birth > select{
+	height: 42px;
+	border: 1px solid #7c7c7c;
+	background-color: #eeeeee;
+	padding: 2px 10px;
+	font-size:  1rem;
+	float: left;
+}
+
+.ca-birth > select:nth-child(1){
+	width: calc(36% + 4px);
+}
+
+.ca-birth > select:nth-child(2){
+	width: calc(32% - 12px);
+	margin-left: 10px;
+}
+
+.ca-birth > select:nth-child(3){
+	width: calc(32% - 12px);
+	margin-left: 10px;
+}
+
+#ca-check{
+	position: relative;
+	width: 100%;
+	margin-top:10px;
+}
+
+#ca-check input{
+	width: 16px;
+	height: 16px;
+	border: 1px solid #7c7c7c;
+	background-color: #eeeeee;
+	vertical-align: middle;
+	margin-left: 0;
+}
+
+#ca-check span{
+	color: #7c7c7c;
+	font-size: 0.875rem;
+}
+
+#ca-check span a{
+	color: #007edb;
+	text-decoration: none;
+}
+
+#ca-check span a i{
+	margin:0 3px;
+}
+
+#ca-note{
+	margin: 0;
+	color: #c62323;
+}
+
+.note{
+	font-size: 0.875rem;
+}
+
+#ca-submit{
+	position: relative;
+	width: 100%;
+	height: 38px;
+	display: block;
+	outline: none;
+	background-color: #00233d;
+	border: 1px solid #7c7c7c;
+	line-height: 36px;
+	text-align: center;
+	font-size: 1.125rem;
+	color: #fff;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#enter-Vcode{
+	position: relative;
+	width: calc(100% - 50px);
+}
+
+#resend-Vcode{
+	margin: 10px 0 0 0;
+	text-align: center;
+	color: #7c7c7c;
+}
+
+#resend-Vcode a{
+	color: #007edb;
+	text-decoration: none;
+}
+
+#ca-comfirm{
+	position: relative;
+	width: 100%;
+	height: 38px;
+	display: block;
+	outline: none;
+	background-color: #00233d;
+	border: 1px solid #7c7c7c;
+	line-height: 36px;
+	text-align: center;
+	font-size: 1.125rem;
+	color: #fff;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#signup-success{
+	position: relative;
+	width: calc(100% - 0px);
+}
+
+.signin-btn{
+	position: relative;
+	height: 38px;
+	display: block;
+	outline: none;
+	background-color: #00233d;
+	border: 1px solid #7c7c7c;
+	line-height: 36px;
+	text-align: center;
+	font-size: 1.125rem;
+	color: #fff;
+	margin: 10px auto;
+	cursor: pointer;
+	text-decoration: none;
+	padding: 0 20px;
+}
+
+.tip{
+	color: #313131;
+	text-align: center;
+}
+
+/*---------------------------------Sign-in---------------------------------*/
+
+section.signin{
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding-top: 70px;
+}
+.webp section.signin{
+	background: url('../imgp/signpagelogobg.webp') no-repeat center center;
+	background-color: #fff;
+	background-size: contain;
+}
+.no-webp section.signin{
+	background: url('../img/signpagelogobg.png') no-repeat center center;
+	background-color: #fff;
+	background-size: contain;
+}
+
+.signin-area{
+	width: 400px;
+	/*height: calc(100% - 0px);*/
+	min-height: 80vh;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+	padding: 150px 0px 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.signin-area h1{
+	text-align: center;
+	font-size: 1.5625rem;
+	color: #00233d;
+}
+
+form.signin-form{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+form.signin-form > input{
+	width: calc(100% - 0px);
+	height: 36px;
+	border: 1px solid #7c7c7c;
+	background-color: #eeeeee;
+	padding: 2px 10px;
+	margin-top:10px;
+	font-size:  1rem;
+	outline: none;
+}
+
+form.signin-form input::placeholder {
+	color: #7c7c7c;
+	opacity: 1; /* Firefox */
+	font-family: 'Noto Sans TC' !important;
+}
+
+form.signin-form input:-ms-input-placeholder {
+	color: #7c7c7c;
+	font-family: 'Noto Sans TC' !important;
+}
+
+form.signin-form input::-ms-input-placeholder { 
+	color: #7c7c7c;
+	font-family: 'Noto Sans TC' !important;
+}
+
+#signin-btn{
+	position: relative;
+	width: 100%;
+	height: 38px;
+	display: block;
+	outline: none;
+	background-color: #00233d;
+	border: 1px solid #7c7c7c;
+	line-height: 36px;
+	text-align: center;
+	font-size: 1.125rem;
+	color: #fff;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.signin-area ul{
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.signin-area ul li{
+	width: 100%;
+	margin: 10px 0;
+}
+
+.signin-a{
+	text-decoration: none;
+	font-size: 1rem;
+	color: #007edb;
+}
+
+.signin-a:hover{
+	text-decoration: underline;
+}
+
+#ar-btn{
+	position: relative;
+	width: 100%;
+	height: 38px;
+	display: block;
+	outline: none;
+	background-color: #00233d;
+	border: 1px solid #7c7c7c;
+	line-height: 36px;
+	text-align: center;
+	font-size: 1.125rem;
+	color: #fff;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#pr-btn{
+	position: relative;
+	width: 100%;
+	height: 38px;
+	display: block;
+	outline: none;
+	background-color: #00233d;
+	border: 1px solid #7c7c7c;
+	line-height: 36px;
+	text-align: center;
+	font-size: 1.125rem;
+	color: #fff;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+
+/*---------------------------------INDEX-RWD---------------------------------*/
+
+/*for 手機裝置(螢幕尺寸<320px)*/
+@media screen and (max-width:320px){
+	
+}
+
+
+/*for 手機裝置(螢幕尺寸<768px)*/
+@media screen and (max-width:767px){
+	/*html{
+		height: 100%;
+	}*/
+
+	body{
+		width: 100%;
+		height: 100%;
+	}
+
+	.container{
+		position: relative;
+		/*height: 100%;*/
+		height: auto;
+	}
+
+	section.signup {
+	    /*height: calc(100vh - 93px);*/
+	    min-height: 100vh;
+	    padding-top: 50px;
+	}
+
+	section.signin {
+	   	/*height: calc(100vh - 93px);*/
+	   	min-height: 100vh;
+	   	padding-top: 50px;
+	}
+
+	.signup-area {
+	    width: calc(100% - 0px);
+	    height: auto;
+	    padding: 10px;
+	}
+
+	.sign-logo {
+	    width: 80%;
+	}
+
+	.signup-area h1 {
+	    font-size: 1.875rem;
+	    margin-bottom: 5px;
+	}
+
+	form.signup-form > input {
+	    font-size: 0.875rem;
+	}
+
+	.ca-mobile > select {
+	    width: calc(35% - 0px);
+	    font-size: 0.875rem;
+	}
+
+	.ca-mobile > input {
+	    width: calc(65% - 10px);
+	    font-size: 0.875rem;
+	}
+
+	.ca-birth > select {
+	    font-size: 0.875rem;
+	}
+
+	#ca-check {
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	}
+
+	.sign-footer{
+		position: relative;
+
+	}
+
+	.copyright {
+	    padding-bottom: 15px;
+	}
+
+
+	#enter-Vcode{
+		width: calc(100% - 20px);
+	}
+
+	#signup-success{
+		width: calc(100% - 20px);
+	}
+
+	.signin-btn{
+		width: calc(100% - 20px);
+	}
+
+	.signin-area {
+	    width: calc(100% - 20px);
+	    /*height: 100%;*/
+	    padding: 60px 10px 20px;
+	}
+
+	.signin-area h1 {
+	    font-size: 1.875rem;
+	    margin-bottom: 5px;
+	}
+
+	form.signin-form > input {
+	    font-size: 0.875rem;
+	}
+
+}
+
+
+/*for 平板+手機裝置*/
+@media screen and (max-width:1260px){
+	
+}
+
+/*for 平板裝置(768px<螢幕尺寸<1024px)*/
+@media screen and (min-width:768px) and (max-width:1024px){   
+	
+}
+
+/*for 一般電腦裝置(螢幕尺寸>1025px)*/
+@media screen and (min-width:1025px){   
+
+}

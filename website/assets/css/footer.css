@@ -1,0 +1,85 @@
+/*---------------------------------Footer---------------------------------*/
+
+footer{
+	width: 100%;
+	height: auto;
+	position: relative;
+	background-color: #1b1b1b;
+	padding: 30px 0;
+}
+
+.footer-logo{
+	position: relative;
+	margin: 0 auto;
+	display:block;
+}
+
+ul.corp-code{
+	padding: 0;
+	list-style: none;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 300px;
+}
+
+ul.corp-code li{
+	display: inline-block;
+	padding: 2px 20px;
+}
+
+ul.corp-code li a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.875rem;
+	color: #d1d1d1;
+	transition: 0.3s linear;
+}
+
+ul.corp-code li a:hover{
+	color: #007edb;
+}
+
+ul.corp-code li:nth-child(1){
+	border-right: 1px solid  #3b5a6f;
+}
+
+ul.corp-code li:nth-child(2){
+	border-right: 1px solid  #3b5a6f;
+}
+
+.copyright{
+	position: relative;
+    font-size: 0.875rem;
+    color: #9c9c9c;
+    text-align: center;
+    line-height: 1.1rem;
+    margin-top: 20px;
+}
+
+
+/*---------------------------------FOOTER-RWD---------------------------------*/
+
+/*for 手機裝置(螢幕尺寸<768px)*/
+@media screen and (max-width:767px){
+	footer {
+		height: 43px;
+		padding: 7px 0;
+	}
+
+	.footer-logo {
+	    display: none;
+	}
+
+	ul.corp-code {
+	    display: none;
+	}
+
+	.copyright {
+		font-size: 0.75rem;
+		line-height: 17px;
+		height: 36px;
+		margin: 0px;
+	}
+}

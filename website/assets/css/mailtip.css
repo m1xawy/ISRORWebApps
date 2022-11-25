@@ -1,0 +1,37 @@
+ul.ui-mailtip {
+  zoom: 1; /* for IE6 IE7 clear float */
+  background-color: #fff;
+  list-style: none;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  text-align: left;
+  font: italic 13px/1.5 Consolas, "Liberation Mono", Menlo, Courier, monospace, sans-serif;
+}
+ul.ui-mailtip:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+ul.ui-mailtip li {
+  margin: 0; padding: 0; float: none;
+}
+ul.ui-mailtip li p {
+  height: 28px;
+  text-align: inherit;
+  line-height: 28px;
+  cursor: pointer;
+  margin: 0 9px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+ul.ui-mailtip li.active {
+  color: #eb7350;
+  background: #eaeaea;
+}
+ul.ui-mailtip li.hover {
+  background: #e7f6ff;
+}
